@@ -1,0 +1,36 @@
+<div>
+  <div class="dropdown filter align-left">
+    <span class="position-filter">Filter by position &#9660;</span>
+    <div class="dropdown-content">
+      <ul>
+        <li class="parent" *ngFor="let jobPosition of positionFunctionFilters">
+          <input type="checkbox" id="{{jobPosition.id}}" value="{{jobPosition.id}}" (change)="true" #parentCheckBox>
+          <label for="{{jobPosition.id}}">{{jobPosition.name_en}}</label>
+          <ul *ngIf="parentCheckBox.checked">
+            <li class="child" *ngFor="let child of jobPosition.children">
+              <input type="checkbox" id="{{child.id}}" name="childOption" value="{{child.id}}" #childCheckBox
+                     (change)="getPositionId(childCheckBox.value)">
+              <label for="{{child.id}}">{{child.name_en}}</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="dropdown align-right">
+    <button class="dropbtn filter">{{pagesDisplay}} &#9660;</button>
+    <div class="dropdown-content-pages">
+      <button class="pages-select" (click)="setPages(5, '5'); getJobs()">5</button>
+      <button class="pages-select" (click)="setPages(25, '25'); getJobs()">25</button>
+      <button class="pages-select" (click)="setPages(9999, 'Display all'); getJobs()">Display all</button>
+    </div>
+  </div>
+</div>
+
+<div class="job-card" *ngFor="let jobListing of jobListings">
+  <h3 class="job-title">{{jobListing?.job?.title}}</h3>
+  <p class="job-description">{{jobListing?.job?.unit?.display_name}} &#9679;
+    {{jobListing?.job?.position_function?.name_en}} &#9679;
+    {{jobListing?.job?.due_date | date: 'dd/MM/yyyy'}}</p>
+</div>

@@ -1,0 +1,129 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  width: 400px;
+  box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  height: 375px;
+  overflow-y: scroll
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  border: none;
+  background-color: #fff;
+}
+
+.dropdown-content-pages {
+  display: none;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  height: 80px;
+  width: 95px;
+}
+
+.dropdown:hover .dropdown-content-pages {
+  display: block;
+}
+
+.pages-select {
+  border: none;
+  margin: 5px auto;
+  background-color: #f9f9f9;
+  display: block;
+  font-family: Avenir, Muli, sans-serif;
+  font-size: 15px;
+  color: #757575;
+  cursor: pointer;
+}
+.align-left {
+  position: absolute;
+  left: 10vw;
+  top: 140px;
+}
+
+.align-right {
+  position: absolute;
+  right: 10vw;
+  top: 140px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 10px 25px;
+  color: #333;
+  font-weight: normal;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.filter {
+  margin: auto;
+  font-family: Avenir, Muli, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #2E2E2E;
+  cursor: pointer;
+
+}
+
+.position-filter {
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.job-card {
+  margin: 15px auto;
+  width: 80vw;
+  border: solid 1px #D8DBDB;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px #D8DBDB;
+}
+
+.job-title {
+  margin: 15px auto 5px 20px;
+  color: #2E2E2E;
+  font-family: Avenir, Muli, sans-serif;
+  font-weight: bold;
+}
+
+.job-description {
+  margin: 10px auto 15px 20px;
+  display: inline-block;
+  font-family: Avenir, Muli, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #757575;
+}
